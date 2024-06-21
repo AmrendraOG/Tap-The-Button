@@ -10,6 +10,12 @@ scoreText.textContent = `${score}`;
 
 let ran = generateRandom();
 
+if (ran === 0 ) {
+  while (ran != 0) {
+    ran = generateRandom();
+  }
+}
+
 let button = document.getElementById("button");
 
 button.onclick = () => {
@@ -25,6 +31,12 @@ button.onclick = () => {
     score = 0;
     highscoreText.textContent = `High Score: ${highscore}`;
     ran = generateRandom();
+  }
+
+  if (ran === 0 ) {
+    while (ran != 0) {
+      ran = generateRandom();
+    }
   }
 
   scoreText.textContent = score;
